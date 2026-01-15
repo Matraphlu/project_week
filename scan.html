@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scanner - Salon du Cheval 2026</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/scan.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-nav">
+                <a href="index.html" class="back-btn">← Retour</a>
+                <h1>Scanner une carte</h1>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content scan-content">
+            <section class="scanner-section">
+                <div class="scanner-container">
+                    <div class="camera-view" id="camera-view">
+                        <div class="scan-frame">
+                            <div class="corner top-left"></div>
+                            <div class="corner top-right"></div>
+                            <div class="corner bottom-left"></div>
+                            <div class="corner bottom-right"></div>
+                            <div class="scan-line"></div>
+                        </div>
+                        <p class="scan-instruction">Placez la carte dans le cadre</p>
+                    </div>
+                    
+                    <div class="scanner-controls">
+                        <button class="scanner-btn" id="activate-camera">
+                            📷 Activer la caméra
+                        </button>
+                        <button class="scanner-btn secondary" id="manual-entry">
+                            ⌨️ Entrer le code manuellement
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="manual-entry-section" id="manual-section" style="display: none;">
+                <h3>Entrer le code de la carte</h3>
+                <div class="code-input-group">
+                    <input type="text" class="code-input" maxlength="4" placeholder="XXXX" id="code-1">
+                    <span class="separator">-</span>
+                    <input type="text" class="code-input" maxlength="4" placeholder="XXXX" id="code-2">
+                    <span class="separator">-</span>
+                    <input type="text" class="code-input" maxlength="4" placeholder="XXXX" id="code-3">
+                </div>
+                <button class="validate-code-btn" id="validate-code">Valider</button>
+            </section>
+
+            <section class="recent-scans">
+                <h2 class="section-title">Dernières cartes scannées</h2>
+                <div class="recent-cards-list" id="recent-scans">
+                    <p class="empty-state">Aucune carte scannée récemment</p>
+                </div>
+            </section>
+
+            <section class="scan-tips">
+                <h3>Conseils de scan</h3>
+                <ul class="tips-list">
+                    <li>✓ Assurez-vous d'avoir un bon éclairage</li>
+                    <li>✓ Tenez la carte bien droite</li>
+                    <li>✓ Évitez les reflets sur la carte</li>
+                    <li>✓ Le code se trouve au dos de la carte</li>
+                </ul>
+            </section>
+        </main>
+
+        <!-- Navigation -->
+        <nav class="bottom-nav">
+            <a href="index.html" class="nav-item">
+                <span class="nav-icon">🏠</span>
+                <span class="nav-label">Accueil</span>
+            </a>
+            <a href="shop.html" class="nav-item">
+                <span class="nav-icon">🛒</span>
+                <span class="nav-label">Boutique</span>
+            </a>
+            <a href="scan.html" class="nav-item active">
+                <span class="nav-icon">📷</span>
+                <span class="nav-label">Scanner</span>
+            </a>
+            <a href="collection.html" class="nav-item">
+                <span class="nav-icon">📚</span>
+                <span class="nav-label">Collection</span>
+            </a>
+            <a href="trade.html" class="nav-item">
+                <span class="nav-icon">🔄</span>
+                <span class="nav-label">Échanger</span>
+            </a>
+        </nav>
+    </div>
+
+    <!-- Scan Success Modal -->
+    <div id="scan-modal" class="modal">
+        <div class="modal-content scan-success">
+            <div class="success-animation">
+                <div class="checkmark">✓</div>
+            </div>
+            <h2>Carte ajoutée !</h2>
+            <div class="scanned-card-preview" id="scanned-card-preview"></div>
+            <div class="modal-actions">
+                <button class="primary-btn" id="view-card">Voir la carte</button>
+                <button class="secondary-btn" id="continue-scan">Continuer</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/scan.js"></script>
+</body>
+</html>

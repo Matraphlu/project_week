@@ -1,0 +1,512 @@
+/* ===================================
+   TRADE PAGE STYLES
+   =================================== */
+
+.trade-content {
+    background: var(--gray-100);
+}
+
+/* ===============
+   TRADE TABS
+   =============== */
+
+.trade-tabs {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-lg);
+    padding: var(--spacing-md);
+    background: var(--primary-light);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-sm);
+    overflow-x: auto;
+}
+
+@media (min-width: 769px) {
+    .trade-tabs {
+        gap: var(--spacing-md);
+        padding: var(--spacing-lg);
+        overflow-x: visible;
+    }
+}
+
+.trade-tab {
+    flex: 1;
+    min-width: 100px;
+    padding: var(--spacing-md);
+    background: var(--gray-100);
+    border: none;
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    transition: var(--transition-base);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-xs);
+    position: relative;
+}
+
+.trade-tab.active {
+    background: var(--accent);
+    color: var(--primary-light);
+}
+
+.trade-tab:hover:not(.active) {
+    background: var(--gray-200);
+}
+
+.tab-icon {
+    font-size: var(--text-xl);
+}
+
+.tab-label {
+    font-size: var(--text-sm);
+    font-weight: 600;
+}
+
+.tab-badge {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    background: var(--mythic);
+    color: var(--primary-light);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    font-size: var(--text-xs);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ===============
+   TAB CONTENT
+   =============== */
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* ===============
+   OFFERS
+   =============== */
+
+.offers-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.trade-offer {
+    background: var(--primary-light);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.offer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    background: var(--gray-200);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--text-xl);
+}
+
+.user-name {
+    font-weight: 600;
+    color: var(--primary-dark);
+    font-size: var(--text-base);
+}
+
+.user-rating {
+    font-size: var(--text-xs);
+    color: var(--gray-500);
+}
+
+.offer-time {
+    font-size: var(--text-xs);
+    color: var(--gray-500);
+}
+
+.offer-cards {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+@media (min-width: 769px) {
+    .offer-cards {
+        gap: var(--spacing-lg);
+    }
+}
+
+.offer-side {
+    flex: 1;
+}
+
+.side-label {
+    font-size: var(--text-xs);
+    color: var(--gray-500);
+    text-transform: uppercase;
+    margin-bottom: var(--spacing-sm);
+    font-weight: 600;
+}
+
+.offer-arrow {
+    font-size: var(--text-2xl);
+    color: var(--accent);
+    flex-shrink: 0;
+}
+
+.offer-actions {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.decline-btn,
+.accept-btn {
+    flex: 1;
+    padding: var(--spacing-md);
+    border: none;
+    border-radius: var(--radius-lg);
+    font-size: var(--text-base);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition-base);
+}
+
+.decline-btn {
+    background: var(--gray-200);
+    color: var(--primary-dark);
+}
+
+.decline-btn:hover {
+    background: var(--gray-300);
+}
+
+.accept-btn {
+    background: var(--accent);
+    color: var(--primary-light);
+}
+
+.accept-btn:hover {
+    background: var(--accent-dark);
+}
+
+/* ===============
+   MARKET
+   =============== */
+
+.market-search {
+    background: var(--primary-light);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.market-filters {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-md);
+}
+
+.market-listings {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.market-item {
+    background: var(--primary-light);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-base);
+}
+
+.market-item:hover {
+    box-shadow: var(--shadow-lg);
+}
+
+.item-card {
+    margin-bottom: var(--spacing-md);
+}
+
+.card-image {
+    width: 100%;
+    height: 200px;
+    background: var(--gray-200);
+    border-radius: var(--radius-lg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--spacing-sm);
+    padding: var(--spacing-md);
+    color: var(--primary-light);
+}
+
+.card-image.legendary {
+    background: linear-gradient(135deg, var(--legendary) 0%, #d97706 100%);
+}
+
+.card-image.ultra-rare {
+    background: linear-gradient(135deg, var(--ultra-rare) 0%, #6d28d9 100%);
+}
+
+.card-title {
+    font-size: var(--text-xl);
+    font-weight: 700;
+    margin-bottom: var(--spacing-xs);
+}
+
+.card-subtitle {
+    font-size: var(--text-sm);
+    opacity: 0.9;
+}
+
+.item-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.seller-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.seller-name {
+    font-weight: 600;
+    color: var(--primary-dark);
+}
+
+.seller-rating {
+    font-size: var(--text-xs);
+    color: var(--gray-500);
+}
+
+.item-price {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: var(--spacing-sm);
+}
+
+.price-value {
+    font-size: var(--text-xl);
+    font-weight: 700;
+    color: var(--accent);
+}
+
+.trade-btn {
+    background: var(--accent);
+    color: var(--primary-light);
+    border: none;
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border-radius: var(--radius-md);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition-base);
+}
+
+.trade-btn:hover {
+    background: var(--accent-dark);
+}
+
+/* ===============
+   MY TRADES
+   =============== */
+
+.create-offer-btn-container {
+    margin-bottom: var(--spacing-lg);
+}
+
+.create-offer-btn {
+    width: 100%;
+    background: var(--accent);
+    color: var(--primary-light);
+    border: none;
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-xl);
+    font-size: var(--text-base);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition-base);
+    box-shadow: var(--shadow-md);
+}
+
+.create-offer-btn:hover {
+    background: var(--accent-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.my-trades-list {
+    background: var(--primary-light);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.my-trades-list h3 {
+    font-size: var(--text-lg);
+    margin: var(--spacing-lg) 0 var(--spacing-md) 0;
+    color: var(--primary-dark);
+}
+
+.my-trades-list h3:first-child {
+    margin-top: 0;
+}
+
+.trade-item {
+    background: var(--gray-100);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.trade-item:last-child {
+    margin-bottom: 0;
+}
+
+.trade-status {
+    font-size: var(--text-xs);
+    font-weight: 700;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-sm);
+    margin-bottom: var(--spacing-sm);
+}
+
+.trade-item.pending .trade-status {
+    background: var(--legendary);
+    color: var(--primary-light);
+}
+
+.trade-item.completed .trade-status {
+    background: var(--accent);
+    color: var(--primary-light);
+}
+
+.trade-item.declined .trade-status {
+    background: var(--gray-400);
+    color: var(--primary-light);
+}
+
+.trade-summary {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.trade-summary span {
+    font-size: var(--text-sm);
+    color: var(--gray-600);
+}
+
+.trade-summary strong {
+    color: var(--primary-dark);
+}
+
+.trade-date {
+    font-size: var(--text-xs);
+    color: var(--gray-500);
+}
+
+.cancel-trade {
+    background: var(--gray-200);
+    border: none;
+    padding: var(--spacing-xs) var(--spacing-md);
+    border-radius: var(--radius-md);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition-base);
+}
+
+.cancel-trade:hover {
+    background: var(--gray-300);
+}
+
+/* ===============
+   CREATE OFFER MODAL
+   =============== */
+
+.create-offer-modal {
+    max-width: 500px;
+}
+
+.create-offer-modal h2 {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.offer-creation {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+}
+
+.offer-section h3 {
+    font-size: var(--text-base);
+    margin-bottom: var(--spacing-md);
+    color: var(--primary-dark);
+}
+
+.selected-cards {
+    min-height: 100px;
+    background: var(--gray-100);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+}
+
+.select-cards-btn {
+    width: 100%;
+    background: var(--gray-200);
+    border: 2px dashed var(--gray-400);
+    color: var(--primary-dark);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition-base);
+}
+
+.select-cards-btn:hover {
+    border-color: var(--accent);
+    background: var(--gray-100);
+}

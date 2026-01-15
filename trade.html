@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Échanger - Salon du Cheval 2026</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/trade.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-nav">
+                <a href="index.html" class="back-btn">← Retour</a>
+                <h1>Échanges</h1>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content trade-content">
+            <!-- Tabs -->
+            <section class="trade-tabs">
+                <button class="trade-tab active" data-tab="offers">
+                    <span class="tab-icon">📥</span>
+                    <span class="tab-label">Offres</span>
+                    <span class="tab-badge">3</span>
+                </button>
+                <button class="trade-tab" data-tab="market">
+                    <span class="tab-icon">🏪</span>
+                    <span class="tab-label">Marché</span>
+                </button>
+                <button class="trade-tab" data-tab="my-trades">
+                    <span class="tab-icon">📤</span>
+                    <span class="tab-label">Mes échanges</span>
+                </button>
+            </section>
+
+            <!-- Offers Tab -->
+            <section class="tab-content active" id="offers-tab">
+                <div class="offers-list">
+                    <div class="trade-offer">
+                        <div class="offer-header">
+                            <div class="user-info">
+                                <div class="user-avatar">👤</div>
+                                <div>
+                                    <div class="user-name">EquiFan92</div>
+                                    <div class="user-rating">⭐⭐⭐⭐⭐ (48)</div>
+                                </div>
+                            </div>
+                            <span class="offer-time">Il y a 2h</span>
+                        </div>
+                        <div class="offer-cards">
+                            <div class="offer-side">
+                                <p class="side-label">Propose</p>
+                                <div class="mini-card rare">
+                                    <div class="card-name">Kevin Staut</div>
+                                    <div class="card-rarity">★★ Rare</div>
+                                </div>
+                            </div>
+                            <div class="offer-arrow">⇄</div>
+                            <div class="offer-side">
+                                <p class="side-label">Cherche</p>
+                                <div class="mini-card ultra-rare">
+                                    <div class="card-name">Jappeloup</div>
+                                    <div class="card-rarity">★★★ Ultra Rare</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="offer-actions">
+                            <button class="decline-btn">Refuser</button>
+                            <button class="accept-btn">Accepter</button>
+                        </div>
+                    </div>
+
+                    <div class="trade-offer">
+                        <div class="offer-header">
+                            <div class="user-info">
+                                <div class="user-avatar">👤</div>
+                                <div>
+                                    <div class="user-name">ChevalPassion</div>
+                                    <div class="user-rating">⭐⭐⭐⭐ (31)</div>
+                                </div>
+                            </div>
+                            <span class="offer-time">Il y a 5h</span>
+                        </div>
+                        <div class="offer-cards">
+                            <div class="offer-side">
+                                <p class="side-label">Propose</p>
+                                <div class="mini-card common">
+                                    <div class="card-name">Dressage</div>
+                                    <div class="card-rarity">★ Commun</div>
+                                </div>
+                                <div class="mini-card common">
+                                    <div class="card-name">Saut d'obstacles</div>
+                                    <div class="card-rarity">★ Commun</div>
+                                </div>
+                            </div>
+                            <div class="offer-arrow">⇄</div>
+                            <div class="offer-side">
+                                <p class="side-label">Cherche</p>
+                                <div class="mini-card rare">
+                                    <div class="card-name">Western</div>
+                                    <div class="card-rarity">★★ Rare</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="offer-actions">
+                            <button class="decline-btn">Refuser</button>
+                            <button class="accept-btn">Accepter</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Market Tab -->
+            <section class="tab-content" id="market-tab">
+                <div class="market-search">
+                    <input type="text" class="search-input" placeholder="Rechercher une carte...">
+                    <div class="market-filters">
+                        <select class="filter-select">
+                            <option value="all">Toutes catégories</option>
+                            <option value="disciplines">Disciplines</option>
+                            <option value="cavaliers">Cavaliers</option>
+                            <option value="chevaux">Chevaux</option>
+                        </select>
+                        <select class="filter-select">
+                            <option value="all">Toutes raretés</option>
+                            <option value="common">Commun</option>
+                            <option value="rare">Rare</option>
+                            <option value="ultra-rare">Ultra Rare</option>
+                            <option value="legendary">Légendaire</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="market-listings">
+                    <div class="market-item">
+                        <div class="item-card">
+                            <div class="card-image legendary">
+                                <div class="card-title">Pierre Durand</div>
+                                <div class="card-subtitle">Cavalier Légende</div>
+                            </div>
+                            <div class="card-rarity legendary">★★★★ Légendaire</div>
+                        </div>
+                        <div class="item-details">
+                            <div class="seller-info">
+                                <span class="seller-name">JumpMaster</span>
+                                <span class="seller-rating">⭐⭐⭐⭐⭐</span>
+                            </div>
+                            <div class="item-price">
+                                <span class="price-value">500 💰</span>
+                                <button class="trade-btn">Proposer échange</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="market-item">
+                        <div class="item-card">
+                            <div class="card-image ultra-rare">
+                                <div class="card-title">Martin Fuchs</div>
+                                <div class="card-subtitle">Cavalier Actif</div>
+                            </div>
+                            <div class="card-rarity ultra-rare">★★★ Ultra Rare</div>
+                        </div>
+                        <div class="item-details">
+                            <div class="seller-info">
+                                <span class="seller-name">EquiCollector</span>
+                                <span class="seller-rating">⭐⭐⭐⭐</span>
+                            </div>
+                            <div class="item-price">
+                                <span class="price-value">250 💰</span>
+                                <button class="trade-btn">Proposer échange</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- My Trades Tab -->
+            <section class="tab-content" id="my-trades-tab">
+                <div class="create-offer-btn-container">
+                    <button class="create-offer-btn" id="create-offer">
+                        + Créer une offre d'échange
+                    </button>
+                </div>
+
+                <div class="my-trades-list">
+                    <h3>En cours</h3>
+                    <div class="trade-item pending">
+                        <div class="trade-status">⏳ En attente</div>
+                        <div class="trade-summary">
+                            <span>Vous proposez: <strong>Big Star</strong></span>
+                            <span>Contre: <strong>Explosion W</strong></span>
+                        </div>
+                        <button class="cancel-trade">Annuler</button>
+                    </div>
+
+                    <h3>Historique</h3>
+                    <div class="trade-item completed">
+                        <div class="trade-status">✓ Terminé</div>
+                        <div class="trade-summary">
+                            <span>Vous avez échangé: <strong>Endurance</strong></span>
+                            <span>Contre: <strong>Western</strong></span>
+                        </div>
+                        <span class="trade-date">Il y a 2 jours</span>
+                    </div>
+
+                    <div class="trade-item declined">
+                        <div class="trade-status">✗ Refusé</div>
+                        <div class="trade-summary">
+                            <span>Vous proposiez: <strong>Dressage</strong></span>
+                            <span>Contre: <strong>Baloubet du Rouet</strong></span>
+                        </div>
+                        <span class="trade-date">Il y a 4 jours</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Navigation -->
+        <nav class="bottom-nav">
+            <a href="index.html" class="nav-item">
+                <span class="nav-icon">🏠</span>
+                <span class="nav-label">Accueil</span>
+            </a>
+            <a href="shop.html" class="nav-item">
+                <span class="nav-icon">🛒</span>
+                <span class="nav-label">Boutique</span>
+            </a>
+            <a href="scan.html" class="nav-item">
+                <span class="nav-icon">📷</span>
+                <span class="nav-label">Scanner</span>
+            </a>
+            <a href="collection.html" class="nav-item">
+                <span class="nav-icon">📚</span>
+                <span class="nav-label">Collection</span>
+            </a>
+            <a href="trade.html" class="nav-item active">
+                <span class="nav-icon">🔄</span>
+                <span class="nav-label">Échanger</span>
+            </a>
+        </nav>
+    </div>
+
+    <!-- Create Offer Modal -->
+    <div id="create-offer-modal" class="modal">
+        <div class="modal-content create-offer-modal">
+            <h2>Créer une offre d'échange</h2>
+            <div class="offer-creation">
+                <div class="offer-section">
+                    <h3>Je propose</h3>
+                    <div class="selected-cards" id="my-cards-offer"></div>
+                    <button class="select-cards-btn" id="select-my-cards">+ Sélectionner</button>
+                </div>
+                <div class="offer-section">
+                    <h3>Je cherche</h3>
+                    <input type="text" class="search-input" placeholder="Nom de la carte...">
+                    <div class="selected-cards" id="wanted-cards"></div>
+                </div>
+            </div>
+            <div class="modal-actions">
+                <button class="secondary-btn" id="cancel-offer">Annuler</button>
+                <button class="primary-btn" id="submit-offer">Publier l'offre</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/trade.js"></script>
+</body>
+</html>

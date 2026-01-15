@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salon du Cheval 2026 - Collection</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-content">
+                <h1 class="logo">Salon du Cheval <span class="year">2026</span></h1>
+                <p class="tagline">Un salon où la passion équestre se collectionne</p>
+            </div>
+            <div class="user-stats">
+                <div class="stat">
+                    <span class="stat-value" id="total-cards">0</span>
+                    <span class="stat-label">Cartes</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value" id="completion">0%</span>
+                    <span class="stat-label">Complété</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <section class="hero-section">
+                <div class="hero-card">
+                    <h2>Bienvenue dans votre collection</h2>
+                    <p>Découvrez, collectionnez et échangez les cartes les plus rares du monde équestre</p>
+                </div>
+            </section>
+
+            <section class="quick-actions">
+                <a href="shop.html" class="action-card shop">
+                    <div class="action-icon">🛒</div>
+                    <h3>Boutique</h3>
+                    <p>Acheter des paquets</p>
+                </a>
+                <a href="scan.html" class="action-card scan">
+                    <div class="action-icon">📷</div>
+                    <h3>Scanner</h3>
+                    <p>Ajouter à ma collection</p>
+                </a>
+                <a href="collection.html" class="action-card collection">
+                    <div class="action-icon">📚</div>
+                    <h3>Collection</h3>
+                    <p>Voir mes cartes</p>
+                </a>
+                <a href="trade.html" class="action-card trade">
+                    <div class="action-icon">🔄</div>
+                    <h3>Échanger</h3>
+                    <p>Trading entre passionnés</p>
+                </a>
+            </section>
+
+            <section class="featured-section">
+                <h2 class="section-title">Cartes en vedette</h2>
+                <div class="featured-cards" id="featured-cards">
+                    <!-- Cards will be loaded dynamically -->
+                </div>
+            </section>
+
+            <section class="news-section">
+                <h2 class="section-title">Actualités</h2>
+                <div class="news-list">
+                    <div class="news-item">
+                        <span class="news-badge new">Nouveau</span>
+                        <p>Nouvelle série de cartes "Légendes" disponible !</p>
+                    </div>
+                    <div class="news-item">
+                        <span class="news-badge event">Événement</span>
+                        <p>Cartes exclusives disponibles pendant le salon</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Navigation -->
+        <nav class="bottom-nav">
+            <a href="index.html" class="nav-item active">
+                <span class="nav-icon">🏠</span>
+                <span class="nav-label">Accueil</span>
+            </a>
+            <a href="shop.html" class="nav-item">
+                <span class="nav-icon">🛒</span>
+                <span class="nav-label">Boutique</span>
+            </a>
+            <a href="scan.html" class="nav-item">
+                <span class="nav-icon">📷</span>
+                <span class="nav-label">Scanner</span>
+            </a>
+            <a href="collection.html" class="nav-item">
+                <span class="nav-icon">📚</span>
+                <span class="nav-label">Collection</span>
+            </a>
+            <a href="trade.html" class="nav-item">
+                <span class="nav-icon">🔄</span>
+                <span class="nav-label">Échanger</span>
+            </a>
+        </nav>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

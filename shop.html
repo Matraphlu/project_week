@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boutique - Salon du Cheval 2026</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/shop.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-nav">
+                <a href="index.html" class="back-btn">← Retour</a>
+                <h1>Boutique</h1>
+                <div class="credits">
+                    <span class="credits-icon">💰</span>
+                    <span id="user-credits">500</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content shop-content">
+            <section class="shop-banner">
+                <h2>Paquets de cartes</h2>
+                <p>Chaque paquet contient 5 cartes aléatoires</p>
+            </section>
+
+            <section class="packs-section">
+                <div class="pack-card starter">
+                    <div class="pack-badge">Débutant</div>
+                    <div class="pack-image">
+                        <div class="pack-icon">📦</div>
+                    </div>
+                    <h3>Pack Starter</h3>
+                    <p class="pack-description">Contient principalement des cartes communes des disciplines de base</p>
+                    <div class="pack-stats">
+                        <div class="stat">
+                            <span class="stat-label">Cartes</span>
+                            <span class="stat-value">5</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Rareté</span>
+                            <span class="stat-value rarity-common">★</span>
+                        </div>
+                    </div>
+                    <div class="pack-footer">
+                        <span class="pack-price">50 💰</span>
+                        <button class="buy-btn" data-pack="starter" data-price="50">Acheter</button>
+                    </div>
+                </div>
+
+                <div class="pack-card premium">
+                    <div class="pack-badge">Premium</div>
+                    <div class="pack-image">
+                        <div class="pack-icon">🎁</div>
+                    </div>
+                    <h3>Pack Premium</h3>
+                    <p class="pack-description">Meilleure chance d'obtenir des cartes rares et des cavaliers actifs</p>
+                    <div class="pack-stats">
+                        <div class="stat">
+                            <span class="stat-label">Cartes</span>
+                            <span class="stat-value">5</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Rareté</span>
+                            <span class="stat-value rarity-rare">★★</span>
+                        </div>
+                    </div>
+                    <div class="pack-footer">
+                        <span class="pack-price">100 💰</span>
+                        <button class="buy-btn" data-pack="premium" data-price="100">Acheter</button>
+                    </div>
+                </div>
+
+                <div class="pack-card legendary">
+                    <div class="pack-badge">Légendaire</div>
+                    <div class="pack-image">
+                        <div class="pack-icon">✨</div>
+                    </div>
+                    <h3>Pack Légendaire</h3>
+                    <p class="pack-description">Garantit au moins une carte rare ou légendaire</p>
+                    <div class="pack-stats">
+                        <div class="stat">
+                            <span class="stat-label">Cartes</span>
+                            <span class="stat-value">5</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Rareté</span>
+                            <span class="stat-value rarity-legendary">★★★</span>
+                        </div>
+                    </div>
+                    <div class="pack-footer">
+                        <span class="pack-price">200 💰</span>
+                        <button class="buy-btn" data-pack="legendary" data-price="200">Acheter</button>
+                    </div>
+                </div>
+
+                <div class="pack-card event">
+                    <div class="pack-badge exclusive">Exclusif Salon</div>
+                    <div class="pack-image">
+                        <div class="pack-icon">🏆</div>
+                    </div>
+                    <h3>Pack Événementiel</h3>
+                    <p class="pack-description">Disponible uniquement pendant le Salon du Cheval 2026</p>
+                    <div class="pack-stats">
+                        <div class="stat">
+                            <span class="stat-label">Cartes</span>
+                            <span class="stat-value">5</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Rareté</span>
+                            <span class="stat-value rarity-mythic">★★★★</span>
+                        </div>
+                    </div>
+                    <div class="pack-footer">
+                        <span class="pack-price">300 💰</span>
+                        <button class="buy-btn" data-pack="event" data-price="300">Acheter</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bundles-section">
+                <h2 class="section-title">Offres groupées</h2>
+                <div class="bundle-list">
+                    <div class="bundle-item">
+                        <div class="bundle-info">
+                            <h4>Pack x3 Starter</h4>
+                            <p>Économisez 15 crédits</p>
+                        </div>
+                        <div class="bundle-action">
+                            <span class="original-price">150</span>
+                            <span class="bundle-price">135 💰</span>
+                            <button class="buy-btn small" data-bundle="starter-3">Acheter</button>
+                        </div>
+                    </div>
+                    <div class="bundle-item">
+                        <div class="bundle-info">
+                            <h4>Pack x5 Premium</h4>
+                            <p>Économisez 50 crédits</p>
+                        </div>
+                        <div class="bundle-action">
+                            <span class="original-price">500</span>
+                            <span class="bundle-price">450 💰</span>
+                            <button class="buy-btn small" data-bundle="premium-5">Acheter</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Navigation -->
+        <nav class="bottom-nav">
+            <a href="index.html" class="nav-item">
+                <span class="nav-icon">🏠</span>
+                <span class="nav-label">Accueil</span>
+            </a>
+            <a href="shop.html" class="nav-item active">
+                <span class="nav-icon">🛒</span>
+                <span class="nav-label">Boutique</span>
+            </a>
+            <a href="scan.html" class="nav-item">
+                <span class="nav-icon">📷</span>
+                <span class="nav-label">Scanner</span>
+            </a>
+            <a href="collection.html" class="nav-item">
+                <span class="nav-icon">📚</span>
+                <span class="nav-label">Collection</span>
+            </a>
+            <a href="trade.html" class="nav-item">
+                <span class="nav-icon">🔄</span>
+                <span class="nav-label">Échanger</span>
+            </a>
+        </nav>
+    </div>
+
+    <!-- Pack Opening Modal -->
+    <div id="pack-modal" class="modal">
+        <div class="modal-content pack-opening">
+            <div class="pack-animation" id="pack-animation">
+                <div class="pack-box">📦</div>
+            </div>
+            <div class="revealed-cards" id="revealed-cards"></div>
+            <button class="close-modal-btn" id="close-pack">Fermer</button>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/shop.js"></script>
+</body>
+</html>
