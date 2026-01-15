@@ -1,9 +1,9 @@
 /* ===================================
-   SCAN PAGE STYLES
+   SCAN PAGE STYLES (DARK)
    =================================== */
 
 .scan-content {
-    background: #f8f9fa;
+    background: #1f2222;
 }
 
 /* ===============
@@ -15,16 +15,16 @@
 }
 
 .scanner-container {
-    background: var(--card-bg);
-    border: 1px solid #e5e7eb;
+    background: #2a2e2e;
+    border: 1px solid #3a3f3f;
     border-radius: var(--radius-lg);
     padding: var(--spacing-lg);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.35);
 }
 
 .camera-view {
     position: relative;
-    background: var(--gray-900);
+    background: #111827;
     border-radius: var(--radius-lg);
     height: 400px;
     display: flex;
@@ -89,7 +89,7 @@
     bottom: var(--spacing-lg);
     left: 50%;
     transform: translateX(-50%);
-    color: var(--primary-light);
+    color: #f8f9fa;
     background: rgba(0, 0, 0, 0.6);
     padding: var(--spacing-sm) var(--spacing-lg);
     border-radius: var(--radius-lg);
@@ -116,7 +116,7 @@
 
 .scanner-btn {
     background: var(--accent);
-    color: var(--primary-light);
+    color: #ffffff;
     border: none;
     padding: var(--spacing-md) var(--spacing-lg);
     border-radius: var(--radius-lg);
@@ -133,16 +133,16 @@
 .scanner-btn:hover {
     background: var(--accent-dark);
     transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.35);
 }
 
 .scanner-btn.secondary {
-    background: var(--gray-200);
-    color: var(--primary-dark);
+    background: #3a3f3f;
+    color: #f8f9fa;
 }
 
 .scanner-btn.secondary:hover {
-    background: var(--gray-300);
+    background: #4a5050;
 }
 
 /* ===============
@@ -150,17 +150,17 @@
    =============== */
 
 .manual-entry-section {
-    background: var(--primary-light);
+    background: #2a2e2e;
     border-radius: var(--radius-xl);
     padding: var(--spacing-xl);
     margin-bottom: var(--spacing-xl);
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.35);
 }
 
 .manual-entry-section h3 {
     text-align: center;
     margin-bottom: var(--spacing-lg);
-    color: var(--primary-dark);
+    color: #f8f9fa;
 }
 
 .code-input-group {
@@ -177,9 +177,10 @@
     text-align: center;
     font-size: var(--text-xl);
     font-weight: 700;
-    border: 2px solid var(--gray-300);
+    border: 2px solid #52525b;
     border-radius: var(--radius-md);
-    background: var(--gray-100);
+    background: #3a3f3f;
+    color: #f8f9fa;
     transition: var(--transition-base);
     text-transform: uppercase;
 }
@@ -187,20 +188,20 @@
 .code-input:focus {
     outline: none;
     border-color: var(--accent);
-    background: var(--primary-light);
+    background: #2a2e2e;
     box-shadow: 0 0 0 3px rgba(54, 193, 210, 0.1);
 }
 
 .separator {
     font-size: var(--text-xl);
-    color: var(--gray-400);
+    color: #9ca3af;
     font-weight: 700;
 }
 
 .validate-code-btn {
     width: 100%;
     background: var(--accent);
-    color: var(--primary-light);
+    color: #ffffff;
     border: none;
     padding: var(--spacing-md);
     border-radius: var(--radius-lg);
@@ -215,7 +216,7 @@
 }
 
 .validate-code-btn:disabled {
-    background: var(--gray-300);
+    background: #4a5050;
     cursor: not-allowed;
 }
 
@@ -224,11 +225,11 @@
    =============== */
 
 .recent-scans {
-    background: var(--primary-light);
+    background: #2a2e2e;
     border-radius: var(--radius-xl);
     padding: var(--spacing-lg);
     margin-bottom: var(--spacing-xl);
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.35);
 }
 
 .recent-cards-list {
@@ -244,24 +245,25 @@
 }
 
 .recent-card-item {
-    background: var(--gray-100);
+    background: #3a3f3f;
     border-radius: var(--radius-md);
     padding: var(--spacing-sm);
     text-align: center;
     cursor: pointer;
     transition: var(--transition-base);
     text-decoration: none;
-    color: var(--primary-dark);
+    color: #f8f9fa;
 }
 
 .recent-card-item:hover {
     transform: translateY(-2px);
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.35);
 }
 
 .recent-card-icon {
     font-size: 2rem;
     margin-bottom: var(--spacing-sm);
+    opacity: 0.7;
 }
 
 .recent-card-name {
@@ -272,7 +274,7 @@
 
 .recent-card-time {
     font-size: var(--text-xs);
-    color: var(--gray-500);
+    color: #9ca3af;
 }
 
 /* ===============
@@ -280,16 +282,16 @@
    =============== */
 
 .scan-tips {
-    background: var(--primary-light);
+    background: #2a2e2e;
     border-radius: var(--radius-xl);
     padding: var(--spacing-lg);
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.35);
 }
 
 .scan-tips h3 {
     font-size: var(--text-lg);
     margin-bottom: var(--spacing-md);
-    color: var(--primary-dark);
+    color: #f8f9fa;
 }
 
 .tips-list {
@@ -301,9 +303,9 @@
 
 .tips-list li {
     font-size: var(--text-sm);
-    color: var(--gray-600);
+    color: #d1d5db;
     padding: var(--spacing-sm);
-    background: var(--gray-100);
+    background: #3a3f3f;
     border-radius: var(--radius-sm);
 }
 
@@ -329,18 +331,18 @@
     justify-content: center;
     margin: 0 auto;
     font-size: 3rem;
-    color: var(--primary-light);
+    color: #ffffff;
     animation: scaleIn 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 .scan-success h2 {
     font-size: var(--text-2xl);
     margin-bottom: var(--spacing-lg);
-    color: var(--primary-dark);
+    color: #f8f9fa;
 }
 
 .scanned-card-preview {
-    background: var(--gray-100);
+    background: #3a3f3f;
     border-radius: var(--radius-lg);
     padding: var(--spacing-lg);
     margin-bottom: var(--spacing-lg);

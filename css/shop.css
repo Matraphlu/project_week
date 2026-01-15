@@ -1,19 +1,23 @@
 /* ===================================
-   SHOP PAGE STYLES
+   SHOP PAGE STYLES (DARK)
    =================================== */
 
 .shop-content {
-    background: #f8f9fa;
+    background: #1f2222;
 }
+
+/* ===============
+   SHOP BANNER
+   =============== */
 
 .shop-banner {
     background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
-    color: var(--primary-light);
+    color: #ffffff;
     padding: var(--spacing-xl) var(--spacing-lg);
     border-radius: var(--radius-xl);
     text-align: center;
     margin-bottom: var(--spacing-xl);
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
 .shop-banner h2 {
@@ -51,19 +55,19 @@
 }
 
 .pack-card {
-    background: var(--card-bg);
-    border: 1px solid #e5e7eb;
+    background: #2a2e2e;
+    border: 1px solid #3a3f3f;
     border-radius: var(--radius-lg);
     padding: var(--spacing-lg);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.45);
     position: relative;
     overflow: hidden;
     transition: var(--transition-base);
 }
 
 .pack-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    transform: translateY(-4px);
+    box-shadow: 0 14px 36px rgba(0,0,0,0.6);
     border-color: var(--accent);
 }
 
@@ -74,31 +78,20 @@
     left: 0;
     right: 0;
     height: 4px;
-    background: var(--gray-400);
+    background: #4a5050;
 }
 
-.pack-card.starter::before {
-    background: var(--common);
-}
-
-.pack-card.premium::before {
-    background: var(--rare);
-}
-
-.pack-card.legendary::before {
-    background: var(--legendary);
-}
-
-.pack-card.event::before {
-    background: var(--mythic);
-}
+.pack-card.starter::before { background: var(--common); }
+.pack-card.premium::before { background: var(--rare); }
+.pack-card.legendary::before { background: var(--legendary); }
+.pack-card.event::before { background: var(--mythic); }
 
 .pack-badge {
     position: absolute;
     top: var(--spacing-md);
     right: var(--spacing-md);
-    background: var(--gray-200);
-    color: var(--primary-dark);
+    background: #3a3f3f;
+    color: var(--text-main);
     padding: var(--spacing-xs) var(--spacing-md);
     border-radius: var(--radius-md);
     font-size: var(--text-xs);
@@ -108,7 +101,7 @@
 
 .pack-badge.exclusive {
     background: var(--mythic);
-    color: var(--primary-light);
+    color: #ffffff;
     animation: pulse 2s ease-in-out infinite;
 }
 
@@ -125,11 +118,11 @@
 .pack-card h3 {
     font-size: var(--text-xl);
     margin-bottom: var(--spacing-sm);
-    color: var(--primary-dark);
+    color: var(--text-main);
 }
 
 .pack-description {
-    color: var(--gray-600);
+    color: var(--text-muted);
     font-size: var(--text-sm);
     margin-bottom: var(--spacing-md);
     line-height: 1.5;
@@ -139,8 +132,8 @@
     display: flex;
     justify-content: space-around;
     padding: var(--spacing-md) 0;
-    border-top: 1px solid var(--gray-200);
-    border-bottom: 1px solid var(--gray-200);
+    border-top: 1px solid #3a3f3f;
+    border-bottom: 1px solid #3a3f3f;
     margin-bottom: var(--spacing-md);
 }
 
@@ -151,14 +144,14 @@
 .pack-stats .stat-label {
     display: block;
     font-size: var(--text-xs);
-    color: var(--gray-500);
+    color: var(--text-muted);
     margin-bottom: var(--spacing-xs);
 }
 
 .pack-stats .stat-value {
     font-size: var(--text-lg);
     font-weight: 700;
-    color: var(--primary-dark);
+    color: var(--text-main);
 }
 
 .rarity-common { color: var(--common); }
@@ -180,7 +173,7 @@
 
 .buy-btn {
     background: var(--accent);
-    color: var(--primary-light);
+    color: #ffffff;
     border: none;
     padding: var(--spacing-sm) var(--spacing-xl);
     border-radius: var(--radius-lg);
@@ -188,13 +181,13 @@
     font-weight: 600;
     cursor: pointer;
     transition: var(--transition-base);
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.4);
 }
 
 .buy-btn:hover {
     background: var(--accent-dark);
     transform: scale(1.05);
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.6);
 }
 
 .buy-btn:active {
@@ -221,8 +214,8 @@
 }
 
 .bundle-item {
-    background: var(--primary-light);
-    border: 2px solid var(--gray-200);
+    background: #2a2e2e;
+    border: 1px solid #3a3f3f;
     border-radius: var(--radius-lg);
     padding: var(--spacing-md);
     display: flex;
@@ -233,12 +226,13 @@
 
 .bundle-item:hover {
     border-color: var(--accent);
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.45);
 }
 
 .bundle-info h4 {
     font-size: var(--text-base);
     margin-bottom: var(--spacing-xs);
+    color: var(--text-main);
 }
 
 .bundle-info p {
@@ -247,15 +241,9 @@
     font-weight: 600;
 }
 
-.bundle-action {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-md);
-}
-
 .original-price {
     text-decoration: line-through;
-    color: var(--gray-400);
+    color: var(--text-muted);
     font-size: var(--text-sm);
 }
 
@@ -274,19 +262,6 @@
     padding: var(--spacing-2xl);
 }
 
-.pack-animation {
-    margin-bottom: var(--spacing-xl);
-}
-
-.pack-box {
-    font-size: 6rem;
-    animation: packShake 0.5s ease-in-out;
-}
-
-.pack-box.opening {
-    animation: packExplosion 0.6s ease-out forwards;
-}
-
 .revealed-cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -301,7 +276,7 @@
 }
 
 .revealed-card {
-    background: var(--gray-100);
+    background: #323737;
     border-radius: var(--radius-lg);
     padding: var(--spacing-md);
     animation: cardReveal 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -309,16 +284,10 @@
     animation-fill-mode: forwards;
 }
 
-.revealed-card:nth-child(1) { animation-delay: 0.1s; }
-.revealed-card:nth-child(2) { animation-delay: 0.2s; }
-.revealed-card:nth-child(3) { animation-delay: 0.3s; }
-.revealed-card:nth-child(4) { animation-delay: 0.4s; }
-.revealed-card:nth-child(5) { animation-delay: 0.5s; }
-
 .revealed-card .card-image {
     width: 100%;
     height: 100px;
-    background: var(--gray-200);
+    background: #3a3f3f;
     border-radius: var(--radius-md);
     display: flex;
     align-items: center;
@@ -331,15 +300,17 @@
     font-size: var(--text-sm);
     font-weight: 600;
     margin-bottom: var(--spacing-xs);
+    color: var(--text-main);
 }
 
 .revealed-card .card-rarity {
     font-size: var(--text-xs);
+    color: var(--text-muted);
 }
 
 .close-modal-btn {
     background: var(--accent);
-    color: var(--primary-light);
+    color: #ffffff;
     border: none;
     padding: var(--spacing-md) var(--spacing-2xl);
     border-radius: var(--radius-lg);

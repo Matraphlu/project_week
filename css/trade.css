@@ -1,9 +1,9 @@
 /* ===================================
-   TRADE PAGE STYLES
+   TRADE PAGE STYLES (DARK)
    =================================== */
 
 .trade-content {
-    background: #f8f9fa;
+    background: #1f2222;
 }
 
 /* ===============
@@ -15,10 +15,10 @@
     gap: var(--spacing-sm);
     margin-bottom: var(--spacing-lg);
     padding: var(--spacing-md);
-    background: var(--card-bg);
-    border: 1px solid #e5e7eb;
+    background: #2a2e2e;
+    border: 1px solid #3a3f3f;
     border-radius: var(--radius-lg);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
     overflow-x: auto;
 }
 
@@ -34,8 +34,8 @@
     flex: 1;
     min-width: 100px;
     padding: var(--spacing-md);
-    background: var(--card-bg);
-    border: 1px solid #d1d5db;
+    background: #323737;
+    border: 1px solid #3a3f3f;
     border-radius: var(--radius-md);
     cursor: pointer;
     transition: var(--transition-base);
@@ -44,17 +44,17 @@
     align-items: center;
     gap: var(--spacing-xs);
     position: relative;
-    color: var(--text-primary);
+    color: var(--text-main);
 }
 
 .trade-tab.active {
     background: var(--accent);
-    color: var(--primary-light);
+    color: #ffffff;
     border-color: var(--accent);
 }
 
 .trade-tab:hover:not(.active) {
-    background: #f3f4f6;
+    background: #3a4040;
     border-color: var(--accent);
 }
 
@@ -72,7 +72,7 @@
     top: -4px;
     right: -4px;
     background: var(--mythic);
-    color: var(--primary-light);
+    color: #ffffff;
     width: 20px;
     height: 20px;
     border-radius: 50%;
@@ -106,10 +106,10 @@
 }
 
 .trade-offer {
-    background: var(--primary-light);
+    background: #2a2e2e;
     border-radius: var(--radius-xl);
     padding: var(--spacing-lg);
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.45);
 }
 
 .offer-header {
@@ -118,7 +118,7 @@
     align-items: center;
     margin-bottom: var(--spacing-md);
     padding-bottom: var(--spacing-md);
-    border-bottom: 1px solid var(--gray-200);
+    border-bottom: 1px solid #3a3f3f;
 }
 
 .user-info {
@@ -130,7 +130,7 @@
 .user-avatar {
     width: 40px;
     height: 40px;
-    background: var(--gray-200);
+    background: #3a3f3f;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -140,18 +140,14 @@
 
 .user-name {
     font-weight: 600;
-    color: var(--primary-dark);
+    color: var(--text-main);
     font-size: var(--text-base);
 }
 
-.user-rating {
-    font-size: var(--text-xs);
-    color: var(--gray-500);
-}
-
+.user-rating,
 .offer-time {
     font-size: var(--text-xs);
-    color: var(--gray-500);
+    color: var(--text-muted);
 }
 
 .offer-cards {
@@ -173,7 +169,7 @@
 
 .side-label {
     font-size: var(--text-xs);
-    color: var(--gray-500);
+    color: var(--text-muted);
     text-transform: uppercase;
     margin-bottom: var(--spacing-sm);
     font-weight: 600;
@@ -203,17 +199,17 @@
 }
 
 .decline-btn {
-    background: var(--gray-200);
-    color: var(--primary-dark);
+    background: #3a3f3f;
+    color: var(--text-main);
 }
 
 .decline-btn:hover {
-    background: var(--gray-300);
+    background: #4a5050;
 }
 
 .accept-btn {
     background: var(--accent);
-    color: var(--primary-light);
+    color: #ffffff;
 }
 
 .accept-btn:hover {
@@ -224,12 +220,13 @@
    MARKET
    =============== */
 
-.market-search {
-    background: var(--primary-light);
+.market-search,
+.market-item {
+    background: #2a2e2e;
     border-radius: var(--radius-xl);
     padding: var(--spacing-lg);
     margin-bottom: var(--spacing-lg);
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
 }
 
 .market-filters {
@@ -245,153 +242,47 @@
     gap: var(--spacing-lg);
 }
 
-.market-item {
-    background: var(--primary-light);
-    border-radius: var(--radius-xl);
-    padding: var(--spacing-lg);
-    box-shadow: var(--shadow-md);
-    transition: var(--transition-base);
-}
-
 .market-item:hover {
-    box-shadow: var(--shadow-lg);
-}
-
-.item-card {
-    margin-bottom: var(--spacing-md);
+    box-shadow: 0 10px 28px rgba(0,0,0,0.55);
 }
 
 .card-image {
     width: 100%;
     height: 200px;
-    background: var(--gray-200);
+    background: #3a3f3f;
     border-radius: var(--radius-lg);
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-bottom: var(--spacing-sm);
-    padding: var(--spacing-md);
-    color: var(--primary-light);
-}
-
-.card-image.legendary {
-    background: linear-gradient(135deg, var(--legendary) 0%, #d97706 100%);
-}
-
-.card-image.ultra-rare {
-    background: linear-gradient(135deg, var(--ultra-rare) 0%, #6d28d9 100%);
+    color: #ffffff;
 }
 
 .card-title {
     font-size: var(--text-xl);
     font-weight: 700;
     margin-bottom: var(--spacing-xs);
+    color: var(--text-main);
 }
 
 .card-subtitle {
     font-size: var(--text-sm);
-    opacity: 0.9;
-}
-
-.item-details {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.seller-info {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-xs);
-}
-
-.seller-name {
-    font-weight: 600;
-    color: var(--primary-dark);
-}
-
-.seller-rating {
-    font-size: var(--text-xs);
-    color: var(--gray-500);
-}
-
-.item-price {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: var(--spacing-sm);
-}
-
-.price-value {
-    font-size: var(--text-xl);
-    font-weight: 700;
-    color: var(--accent);
-}
-
-.trade-btn {
-    background: var(--accent);
-    color: var(--primary-light);
-    border: none;
-    padding: var(--spacing-sm) var(--spacing-lg);
-    border-radius: var(--radius-md);
-    font-size: var(--text-sm);
-    font-weight: 600;
-    cursor: pointer;
-    transition: var(--transition-base);
-}
-
-.trade-btn:hover {
-    background: var(--accent-dark);
+    color: var(--text-muted);
 }
 
 /* ===============
    MY TRADES
    =============== */
 
-.create-offer-btn-container {
-    margin-bottom: var(--spacing-lg);
-}
-
-.create-offer-btn {
-    width: 100%;
-    background: var(--accent);
-    color: var(--primary-light);
-    border: none;
-    padding: var(--spacing-lg);
-    border-radius: var(--radius-xl);
-    font-size: var(--text-base);
-    font-weight: 600;
-    cursor: pointer;
-    transition: var(--transition-base);
-    box-shadow: var(--shadow-md);
-}
-
-.create-offer-btn:hover {
-    background: var(--accent-dark);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-lg);
-}
-
 .my-trades-list {
-    background: var(--primary-light);
+    background: #2a2e2e;
     border-radius: var(--radius-xl);
     padding: var(--spacing-lg);
-    box-shadow: var(--shadow-sm);
-}
-
-.my-trades-list h3 {
-    font-size: var(--text-lg);
-    margin: var(--spacing-lg) 0 var(--spacing-md) 0;
-    color: var(--primary-dark);
-}
-
-.my-trades-list h3:first-child {
-    margin-top: 0;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
 }
 
 .trade-item {
-    background: var(--gray-100);
+    background: #323737;
     border-radius: var(--radius-lg);
     padding: var(--spacing-md);
     margin-bottom: var(--spacing-md);
@@ -400,56 +291,22 @@
     align-items: center;
 }
 
-.trade-item:last-child {
-    margin-bottom: 0;
-}
-
-.trade-status {
-    font-size: var(--text-xs);
-    font-weight: 700;
-    padding: var(--spacing-xs) var(--spacing-sm);
-    border-radius: var(--radius-sm);
-    margin-bottom: var(--spacing-sm);
-}
-
-.trade-item.pending .trade-status {
-    background: var(--legendary);
-    color: var(--primary-light);
-}
-
-.trade-item.completed .trade-status {
-    background: var(--accent);
-    color: var(--primary-light);
-}
-
-.trade-item.declined .trade-status {
-    background: var(--gray-400);
-    color: var(--primary-light);
-}
-
-.trade-summary {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-xs);
-}
-
 .trade-summary span {
     font-size: var(--text-sm);
-    color: var(--gray-600);
+    color: var(--text-muted);
 }
 
 .trade-summary strong {
-    color: var(--primary-dark);
+    color: var(--text-main);
 }
 
 .trade-date {
     font-size: var(--text-xs);
-    color: var(--gray-500);
+    color: var(--text-muted);
 }
 
 .cancel-trade {
-    background: var(--gray-200);
+    background: #3a3f3f;
     border: none;
     padding: var(--spacing-xs) var(--spacing-md);
     border-radius: var(--radius-md);
@@ -457,51 +314,29 @@
     font-weight: 600;
     cursor: pointer;
     transition: var(--transition-base);
+    color: var(--text-main);
 }
 
 .cancel-trade:hover {
-    background: var(--gray-300);
+    background: #4a5050;
 }
 
 /* ===============
    CREATE OFFER MODAL
    =============== */
 
-.create-offer-modal {
-    max-width: 500px;
-}
-
-.create-offer-modal h2 {
-    text-align: center;
-    margin-bottom: var(--spacing-lg);
-}
-
-.offer-creation {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-lg);
-    margin-bottom: var(--spacing-lg);
-}
-
-.offer-section h3 {
-    font-size: var(--text-base);
-    margin-bottom: var(--spacing-md);
-    color: var(--primary-dark);
-}
-
 .selected-cards {
     min-height: 100px;
-    background: var(--gray-100);
+    background: #323737;
     border-radius: var(--radius-md);
     padding: var(--spacing-md);
-    margin-bottom: var(--spacing-sm);
 }
 
 .select-cards-btn {
     width: 100%;
-    background: var(--gray-200);
-    border: 2px dashed var(--gray-400);
-    color: var(--primary-dark);
+    background: #2a2e2e;
+    border: 2px dashed #4a5050;
+    color: var(--text-main);
     padding: var(--spacing-md);
     border-radius: var(--radius-md);
     font-size: var(--text-sm);
@@ -512,5 +347,5 @@
 
 .select-cards-btn:hover {
     border-color: var(--accent);
-    background: var(--gray-100);
+    background: #323737;
 }

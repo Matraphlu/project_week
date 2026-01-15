@@ -46,9 +46,8 @@ function purchasePack(packType, price) {
     // Deduct credits
     Credits.subtract(price);
     updateCreditsDisplay();
-    
     // Open pack
-    const cards = PackOpening.openPack(packType);
+    //const cards = PackOpening.openPack(packType);
     
     // Add cards to collection
     //cards.forEach(card => {
