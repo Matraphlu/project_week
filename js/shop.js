@@ -48,15 +48,16 @@ function purchasePack(packType, price) {
     updateCreditsDisplay();
     
     // Open pack
+    // Open pack
     const cards = PackOpening.openPack(packType);
     
     // Add cards to collection
-    cards.forEach(card => {
-        UserCollection.addCard(card.id);
-    });
+    //cards.forEach(card => {
+    //    UserCollection.addCard(card.id);
+   // });
     
     // Show pack opening animation
-    showPackOpening(cards);
+   // showPackOpening(cards);
 }
 
 function purchaseBundle(bundleType, price) {
