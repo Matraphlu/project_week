@@ -24,7 +24,7 @@ const CARDS_DATABASE = {
     
     cavaliers: [
         // Cavaliers actifs - Communs
-        { id: 'CAV-001', name: 'Pénélope Leprevost', category: 'cavaliers', type: 'actif', rarity: 'common', discipline: 'Saut d\'obstacles', nationality: '🇫🇷', icon: '👤', total: 12000 },
+        { id: 'CAV-001', name: 'Pénélope Leprevost', category: 'cavaliers', type: 'actif', rarity: 'common', discipline: 'Saut d\'obstacles', nationality: '🇫🇷', icon: '👤', total: 12000, image: 'images/cards/penelope-leprevost.jpg' },
         { id: 'CAV-002', name: 'Pauline Basquin', category: 'cavaliers', type: 'actif', rarity: 'common', discipline: 'Saut d\'obstacles', nationality: '🇫🇷', icon: '👤', total: 12000 },
         { id: 'CAV-003', name: 'Gaspard Maksud', category: 'cavaliers', type: 'actif', rarity: 'common', discipline: 'Saut d\'obstacles', nationality: '🇫🇷', icon: '👤', total: 10000 },
         

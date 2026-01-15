@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide - Ajouter des images de cartes</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: #f8f9fa;
+            color: #1a1a1a;
+        }
+        .container {
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        h1 {
+            color: #2563eb;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 0.5rem;
+        }
+        .step {
+            background: #f8f9fa;
+            border-left: 4px solid #2563eb;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0.5rem;
+        }
+        .step h2 {
+            margin-top: 0;
+            color: #1a1a1a;
+        }
+        code {
+            background: #e9ecef;
+            padding: 0.2rem 0.5rem;
+            border-radius: 0.25rem;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        .example {
+            display: flex;
+            gap: 2rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+        .card-preview {
+            width: 280px;
+            height: 400px;
+            border: 2px solid #1a1a1a;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        }
+        .card-preview img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .instructions {
+            flex: 1;
+            min-width: 300px;
+        }
+        .alert {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0.5rem;
+        }
+        .success {
+            background: #d1f2eb;
+            border-left: 4px solid #10b981;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0.5rem;
+        }
+        ol {
+            line-height: 1.8;
+        }
+        pre {
+            background: #1a1a1a;
+            color: #ffffff;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📸 Guide : Ajouter des images aux cartes</h1>
+        
+        <div class="example">
+            <div class="card-preview">
+                <img src="images/cards/penelope-leprevost.jpg" alt="Exemple de carte avec image" 
+                     onerror="this.parentElement.innerHTML='<div style=\'display:flex;align-items:center;justify-content:center;height:100%;font-size:4rem;background:#f8f9fa\'>🏇</div>'">
+            </div>
+            <div class="instructions">
+                <h2>Exemple : Pénélope Leprevost</h2>
+                <p>Cette carte montre le style professionnel attendu :</p>
+                <ul>
+                    <li>✅ Cadre décoratif élégant</li>
+                    <li>✅ Photo haute qualité du cavalier</li>
+                    <li>✅ Nom en évidence</li>
+                    <li>✅ Design cohérent style "carte de collection"</li>
+                </ul>
+                <div class="success">
+                    <strong>✓ Cette carte est déjà configurée dans l'app !</strong><br>
+                    Placez simplement l'image dans <code>images/cards/penelope-leprevost.jpg</code>
+                </div>
+            </div>
+        </div>
+
+        <div class="step">
+            <h2>📐 Étape 1 : Préparer votre image</h2>
+            <p><strong>Dimensions recommandées :</strong></p>
+            <ul>
+                <li>Ratio : <strong>2:3</strong> (format carte verticale)</li>
+                <li>Résolution : 400x600px minimum, 600x900px idéal</li>
+                <li>Format : JPG ou PNG</li>
+                <li>Poids : Optimisé (moins de 500KB)</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h2>📝 Étape 2 : Nommer le fichier</h2>
+            <p><strong>Règles de nommage :</strong></p>
+            <ul>
+                <li>Tout en minuscules</li>
+                <li>Utilisez des tirets <code>-</code> au lieu d'espaces</li>
+                <li>Format : <code>prenom-nom.jpg</code></li>
+            </ul>
+            <p><strong>Exemples :</strong></p>
+            <ul>
+                <li>✅ <code>penelope-leprevost.jpg</code></li>
+                <li>✅ <code>pierre-durand.jpg</code></li>
+                <li>✅ <code>jappeloup.jpg</code></li>
+                <li>❌ <code>Pénélope Leprevost.JPG</code></li>
+                <li>❌ <code>PIERRE DURAND.png</code></li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h2>📁 Étape 3 : Placer l'image</h2>
+            <p>Copiez votre image dans le dossier :</p>
+            <pre>images/cards/votre-image.jpg</pre>
+        </div>
+
+        <div class="step">
+            <h2>💻 Étape 4 : Mettre à jour le code</h2>
+            <p>Ouvrez le fichier <code>js/data.js</code> et ajoutez le champ <code>image</code> :</p>
+            <pre>{ 
+  id: 'CAV-001', 
+  name: 'Pénélope Leprevost',
+  // ... autres champs ...
+  image: 'images/cards/penelope-leprevost.jpg'  // ← Ajoutez cette ligne
+}</pre>
+        </div>
+
+        <div class="step">
+            <h2>✨ Étape 5 : Tester</h2>
+            <p>L'image apparaîtra automatiquement dans :</p>
+            <ul>
+                <li>🏠 Page d'accueil (cartes en vedette)</li>
+                <li>🛒 Boutique (ouverture de paquets)</li>
+                <li>📷 Scanner (résultat du scan)</li>
+                <li>📚 Collection (grille de cartes)</li>
+                <li>🃏 Page de détails</li>
+            </ul>
+        </div>
+
+        <div class="alert">
+            <strong>⚠️ Important :</strong> Si l'image ne charge pas, le système affichera automatiquement l'emoji de fallback. 
+            Vérifiez que le chemin du fichier est correct et que l'image existe bien.
+        </div>
+
+        <div class="step">
+            <h2>🎨 Créer vos propres designs</h2>
+            <p>Utilisez ces outils pour créer des cartes au style similaire :</p>
+            <ul>
+                <li><strong>Canva</strong> - Modèles de cartes à collectionner</li>
+                <li><strong>Photoshop / GIMP</strong> - Design avancé</li>
+                <li><strong>Figma</strong> - Design collaboratif</li>
+            </ul>
+            <p>Inspirez-vous de l'exemple de Pénélope Leprevost pour maintenir une cohérence visuelle.</p>
+        </div>
+
+        <div style="margin-top: 3rem; text-align: center; color: #6c757d;">
+            <p><a href="index.html" style="color: #2563eb; text-decoration: none; font-weight: 500;">← Retour à l'application</a></p>
+        </div>
+    </div>
+</body>
+</html>

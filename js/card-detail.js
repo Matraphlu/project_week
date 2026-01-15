@@ -57,7 +57,11 @@ function displayCard(card) {
     if (editionEl) editionEl.textContent = 'Édition 2026';
     
     if (imageEl) {
-        imageEl.innerHTML = `<div class="placeholder-image">${card.icon || '🏇'}</div>`;
+        if (card.image) {
+            imageEl.innerHTML = `<img src="${card.image}" alt="${card.name}" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-lg);" onerror="this.innerHTML='<div class=\"placeholder-image\">${card.icon || '\ud83c\udfcf'}</div>'">`;
+        } else {
+            imageEl.innerHTML = `<div class="placeholder-image">${card.icon || '🏇'}</div>`;
+        }
     }
     
     // Update card front class for rarity color

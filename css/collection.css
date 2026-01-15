@@ -3,7 +3,7 @@
    =================================== */
 
 .collection-content {
-    background: var(--gray-100);
+    background: #f8f9fa;
 }
 
 .collection-stats {
@@ -11,7 +11,9 @@
     grid-template-columns: repeat(3, 1fr);
     gap: var(--spacing-sm);
     padding: var(--spacing-md);
-    background: rgba(255, 255, 255, 0.5);
+    background: var(--card-bg);
+    border-radius: var(--radius-md);
+    border: 1px solid #e5e7eb;
 }
 
 @media (min-width: 769px) {
@@ -27,11 +29,12 @@
    =============== */
 
 .filters-section {
-    background: var(--primary-light);
-    border-radius: var(--radius-xl);
+    background: var(--card-bg);
+    border: 1px solid #e5e7eb;
+    border-radius: var(--radius-lg);
     padding: var(--spacing-lg);
     margin-bottom: var(--spacing-lg);
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
 .filter-options {
@@ -53,11 +56,12 @@
    =============== */
 
 .progress-section {
-    background: var(--primary-light);
-    border-radius: var(--radius-xl);
+    background: var(--card-bg);
+    border: 1px solid #e5e7eb;
+    border-radius: var(--radius-lg);
     padding: var(--spacing-lg);
     margin-bottom: var(--spacing-lg);
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
 .category-progress {
@@ -79,14 +83,14 @@
 
 .category-name {
     font-size: var(--text-sm);
-    font-weight: 600;
-    color: var(--primary-dark);
+    font-weight: 500;
+    color: var(--text-primary);
 }
 
 .progress-count {
     font-size: var(--text-sm);
-    color: var(--gray-500);
-    font-weight: 600;
+    color: var(--text-secondary);
+    font-weight: 500;
 }
 
 /* ===============
@@ -94,10 +98,11 @@
    =============== */
 
 .cards-grid-section {
-    background: var(--primary-light);
-    border-radius: var(--radius-xl);
+    background: var(--card-bg);
+    border: 1px solid #e5e7eb;
+    border-radius: var(--radius-lg);
     padding: var(--spacing-lg);
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
 .view-toggle {

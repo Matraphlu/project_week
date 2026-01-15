@@ -70,7 +70,7 @@ function createFeaturedCardElement(card) {
         </div>
         <div class="card-image-container">
             <div class="card-image">
-                <div class="placeholder-image">${card.icon || '🏇'}</div>
+                ${card.image ? `<img src="${card.image}" alt="${card.name}" onerror="this.parentElement.innerHTML='<div class=\"placeholder-image\">${card.icon || '\ud83c\udfcf'}</div>'">` : `<div class="placeholder-image">${card.icon || '🏇'}</div>`}
             </div>
         </div>
         <div class="card-info">

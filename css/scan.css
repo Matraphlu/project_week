@@ -3,7 +3,7 @@
    =================================== */
 
 .scan-content {
-    background: var(--gray-100);
+    background: #f8f9fa;
 }
 
 /* ===============
@@ -15,10 +15,11 @@
 }
 
 .scanner-container {
-    background: var(--primary-light);
-    border-radius: var(--radius-xl);
+    background: var(--card-bg);
+    border: 1px solid #e5e7eb;
+    border-radius: var(--radius-lg);
     padding: var(--spacing-lg);
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .camera-view {

@@ -214,7 +214,7 @@ function showScanSuccess(card) {
             </div>
             <div class="card-image-container">
                 <div class="card-image">
-                    <div class="placeholder-image">${card.icon || '🏇'}</div>
+                    ${card.image ? `<img src="${card.image}" alt="${card.name}" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-lg);" onerror="this.outerHTML='<div class=\\"placeholder-image\\">${card.icon || '🏇'}</div>'">` : `<div class="placeholder-image">${card.icon || '🏇'}</div>`}
                 </div>
             </div>
             <div class="card-info">

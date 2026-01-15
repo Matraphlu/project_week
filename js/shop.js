@@ -155,7 +155,7 @@ function createRevealedCardElement(card) {
     cardEl.className = 'revealed-card';
     cardEl.innerHTML = `
         <div class="card-image ${card.rarity}">
-            <div class="placeholder-image">${card.icon || '🏇'}</div>
+            ${card.image ? `<img src="${card.image}" alt="${card.name}" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-lg);" onerror="this.outerHTML='<div class=\"placeholder-image\">${card.icon || '\ud83c\udfcf'}</div>'">` : `<div class="placeholder-image">${card.icon || '🏇'}</div>`}
         </div>
         <div class="card-name">${card.name}</div>
         <div class="card-rarity" style="color: ${getRarityColor(card.rarity)}">
