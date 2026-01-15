@@ -48,7 +48,7 @@ function purchasePack(packType, price) {
     updateCreditsDisplay();
     
     // Open pack
-    const cards = PackOpening.openPack(packType);
+    //const cards = PackOpening.openPack(packType);
     
     // Add cards to collection
     //cards.forEach(card => {
